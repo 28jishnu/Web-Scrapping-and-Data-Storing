@@ -1,0 +1,71 @@
+<html>
+  <head>
+  		<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="{{ url_for('static', filename='style/style.css') }}"		>
+<link href="https://fonts.googleapis.com/css?family=Pacifico|Rubik" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<!--START META DATA PAGE DESCRIPTION-->
+<!--END META DATA PAGE DESCRIPTION-->
+	<title>CitySale</title>
+    <!--Load the AJAX API-->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+
+      // Load the Visualization API and the corechart package.
+      google.charts.load('current', {'packages':['corechart']});
+
+      // Set a callback to run when the Google Visualization API is loaded.
+      google.charts.setOnLoadCallback(drawChart);
+
+      // Callback that creates and populates a data table,
+      // instantiates the pie chart, passes in the data and
+      // draws it.
+      function drawChart() {
+
+        // Create the data table.
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Pricing');
+        data.addColumn('number', 'Number');
+        data.addRows([
+          ['<10000$', {{var1}}],
+          ['<50000$', {{var2}}],
+          ['>50000$', {{var3}}],
+        ]);
+
+        // Set chart options
+        var options = {'title':'Car Count catagorized by Price',
+                       'width':400,
+                       'height':300};
+
+        // Instantiate and draw our chart, passing in some options.
+        var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
+        chart.draw(data, options);
+      }
+    </script>
+    <style >
+  .bg {
+  /* The image used */
+  background-color: : 'grey';
+
+  /* Full height */   
+    width: 40%;
+  height: 50%;
+  bottom: 40%; 
+   
+  
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+} </style>
+  </head>
+
+  <body class="header_section">
+  	<div class='bg' >
+    <!--Div that will hold the pie chart-->
+    <div id="chart_div" style="align="center";"></div>
+</div>
+  </body>
+</html>

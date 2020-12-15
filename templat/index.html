@@ -1,0 +1,100 @@
+ <!DOCTYPE html>
+<html lang="de-CH">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="{{ url_for('static', filename='style/style.css') }}"		>
+<link href="https://fonts.googleapis.com/css?family=Pacifico|Rubik" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<!--START META DATA PAGE DESCRIPTION-->
+
+<!--END META DATA PAGE DESCRIPTION-->
+<title>AutoMap</title>
+</head>
+<body>
+<a href="#top"><img class="arrow_image" src="./images/arrow.svg"></a>
+<a name="top"></a>
+<div id="change_class" class="flex_container section menu_section">
+	<div class="flex_item branding"><p></p></div>
+	<div class="flex_item menu_item dropdown">
+		<p>Menu</p>
+		<div class="dropdown-content">
+			<div class="menu_item menu_item_inside"><a href="#top"><p>Home</p></a></div>
+			<a href=""><div class="menu_item menu_item_inside"><a href="#team"><p>Team</p></a></div>
+			<a href=""><div class="menu_item menu_item_inside"><a href="#contact"><p>Offers</p></a></div>
+		</div>
+	</div>
+	<div class="flex_item menu_item menu_item_outside"><a href="#top"><p>Home</p></a></div>
+	<div class="flex_item menu_item menu_item_outside"><a href="#team"><p>Team</p></a></div>
+	<div class="flex_item menu_item menu_item_outside"><a href="#contact"><p>Services</p></a></div></a>
+</div>
+
+<div class="section page header_section">
+<div class="gradient gradient_red_blue gradient_header_section"></div>
+	<div class="section_container header_section_container flex_container flex_header_container">
+		<div class="text header_text">
+			<h1>Auto Map</h1>
+		</div>
+		<div class="text body_text flex_item flex_header_item">
+			<h2 class="header_quote">Start your Journey here</h2>
+		</div>
+	</div>
+</div>
+
+<div class="section page second_section">
+<a name="team"></a>
+	<div class="section_container second_section_container flex_container flex_center">
+		<div class="text header_text text_grad_purple_yellow">
+			<h1>Our Team</h1>
+		</div>
+		<a href="#link1">
+			<div class="feature flex_feature_item feature1">
+				<div class="feature_image"></div>
+				<h2>Jishnu</h2>
+				<p>Project Manager<br>Developer</p>
+			</div>
+		</a>
+		<a href="#link2">
+			<div class="feature flex_feature_item feature2">
+				<div class="feature_image"></div>
+				<h2>Sharon </h2>
+				<p>Business Analyst</p>
+			</div>
+		</a>
+		<a href="#link3">
+			<div class="feature flex_feature_item feature3">
+				<div class="feature_image"></div>
+				<h2>Fazal</h2>
+				<p>Data Analyst</p>
+			</div>
+		</a>
+	</div>
+</div>
+
+<div class="section page third_section">
+<a name="contact"></a>
+	<div class="gradient gradient_red_yellow gradient_third_section"></div>
+	<div class="section_container third_section_container flex_container flex_center">
+		<div class="text header_text">
+			<h1>Services</h1>
+		</div>
+		<div class="feature offer flex_feature_item offer1">
+			<h2>City Scrape</h2>
+			<p><br><br>Find how many cars are available in each city</p><br>
+			<form method="GET" action="{{ url_for('register') }}" >
+    <input type="submit" name="submit" value="Submit">
+</form>
+	</div>
+</div>
+
+
+<div class="section footer_section">
+	<p class="footer_text">AutoMap - 50 Maitland Drive, Barrie ON, Canada</p>
+</div>
+
+
+
+
+
+</body>
+</html> 

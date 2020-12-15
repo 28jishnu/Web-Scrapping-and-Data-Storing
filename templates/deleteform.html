@@ -1,0 +1,60 @@
+<html>
+<head>
+	<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="{{ url_for('static', filename='style/style.css') }}"		>
+<link href="https://fonts.googleapis.com/css?family=Pacifico|Rubik" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<!--START META DATA PAGE DESCRIPTION-->
+<!--END META DATA PAGE DESCRIPTION-->
+	<title>CitySale</title>
+<style>
+body {
+  font-family: Arial;
+}
+label{
+  margin: 425px;
+}
+
+input[type=text], select {
+  width: 60%;
+  padding: 12px 20px;
+  margin: 8px 425px;
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 60%;
+  background-color: #808080;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 425px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #000000;
+}
+
+</style>
+</head>
+<body 	class="form_section">
+ 	<div >
+	<h1>Delete Car Details</h1>
+ 	<div>
+	<form method="POST" action="{{ url_for('delete') }}" >
+   <label for="title">ID</label>
+  <input type="text"  name="id1" placeholder="Car ID" required="">
+
+  
+    <input type="submit" name="submit" value="Delete">
+	</form>
+ 	</div>
+ </div>
+</body>
+</html>

@@ -1,0 +1,129 @@
+ <!DOCTYPE html>
+<html lang="de-CH">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="{{ url_for('static', filename='style/style.css') }}"		>
+<link href="https://fonts.googleapis.com/css?family=Pacifico|Rubik" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<!--START META DATA PAGE DESCRIPTION-->
+
+<!--END META DATA PAGE DESCRIPTION-->
+<title>AutoMap</title>
+<style >
+	input[type=submit]  {
+  width: 20%;
+  background-color:green;
+  color: white;
+  padding: 8px 20px;
+  margin: 8px 40%;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+input[type=submit]:hover {
+  background-color: #000000;
+}
+</style>
+</head>
+<body>
+<a href="#top"><img class="arrow_image" src="./images/arrow.svg"></a>
+<a name="top"></a>
+<div id="change_class" class="flex_container section menu_section">
+	<div class="flex_item branding"><p></p></div>
+	<div class="flex_item menu_item dropdown">
+		<p>Menu</p>
+		<div class="dropdown-content">
+			<div class="menu_item menu_item_inside"><a href="#top"><p>Home</p></a></div>
+			<a href=""><div class="menu_item menu_item_inside"><a href="#team"><p>Team</p></a></div>
+			<a href=""><div class="menu_item menu_item_inside"><a href="#contact"><p>Offers</p></a></div>
+		</div>
+	</div>
+	<div class="flex_item menu_item menu_item_outside"><a href="#top"><p>Home</p></a></div>
+	<div class="flex_item menu_item menu_item_outside"><a href="#team"><p>Team</p></a></div>
+	<div class="flex_item menu_item menu_item_outside"><a href="#contact"><p>Services</p></a></div></a>
+</div>
+
+<div class="section page header_section">
+<div class="gradient gradient_red_blue gradient_header_section"></div>
+	<div class="section_container header_section_container flex_container flex_header_container">
+		<div class="text header_text">
+			<h1>Auto Map</h1>
+		</div>
+		<div class="text body_text flex_item flex_header_item">
+			<h2 class="header_quote">Start your Journey here</h2>
+		</div>
+	</div>
+</div>
+
+<div class="section page second_section">
+<a name="team"></a>
+	<div class="section_container second_section_container flex_container flex_center">
+		<div class="text header_text">
+			<div class="text header_text">
+			<h1>Team</h1>
+		</div>
+		</div>
+		<a href="#link1">
+			<div class="feature flex_feature_item feature1">
+				<div class="feature_image"></div>
+				<h2>Jishnu</h2>
+				
+			</div>
+		</a>
+		<a href="#link2">
+			<div class="feature flex_feature_item feature2">
+				<div class="feature_image"></div>
+				<h2>Elisha </h2>
+				
+			</div>
+		</a>
+		<a href="#link3">
+			<div class="feature flex_feature_item feature3">
+				<div class="feature_image"></div>
+				<h2>Aphia</h2>
+				
+			</div>
+		</a>
+	</div>
+</div>
+
+<div class="section page third_section">
+<a name="contact"></a>
+	<div class="gradient gradient_red_yellow gradient_third_section"></div>
+	<div class="section_container third_section_container flex_container flex_center">
+		<div class="text header_text">
+			<h1>Services</h1>
+		</div>
+	<div class="feature offer flex_feature_item offer1">
+			<h2>New Entry</h2>
+			<p><br><br>Enter a new car details to the collections</p><br>
+			<form method="GET" action="{{ url_for('register') }}" >
+    <input type="submit" name="submit" value="Insert">
+</form>
+	</div>
+	<div class="feature offer flex_feature_item offer2">
+			<h2>Delete </h2>
+			<p><br><br>Delete a existing document from the database</p><br>
+			<form method="GET" action="{{ url_for('delete') }}" >
+    <input type="submit" name="submit" value="Delete"></form>
+	</div>
+	<div class="feature offer flex_feature_item offer3">
+			<h2>Read </h2>
+			<p><br><br>Search<br></p><br>
+			<form method="GET" action="{{ url_for('readsel') }}" >
+    <input type="submit" name="submit" value="Search"></form>
+	</div>
+</div>
+
+
+<div class="section footer_section">
+	<p class="footer_text">AutoMap - 50 Maitland Drive, Barrie ON, Canada</p>
+</div>
+
+
+
+
+
+</body>
+</html> 
